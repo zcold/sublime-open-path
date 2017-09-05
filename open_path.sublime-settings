@@ -1,0 +1,26 @@
+// Don't edit this file
+// use the one the User folder
+{
+    // text editor
+    "win_text_editor": "",
+    "osx_text_editor": "",
+    "posix_text_editor": "",
+
+    // project path environment var to modify for opening files in other project.
+    // Example:
+    // In project `foo`: $MYPROJ = /projects/myprojects/foo
+    //     In `/projects/myprojects/foo/src/foo_files.txt`:
+    //         `$BARPROJ/src/bar_files.txt` in `foo_files.txt`
+    //         open path `$BARPROJ/src/bar_files.txt` = open path `/projects/myprojects/bar/src/bar_files.txt`
+    //     In `/projects/myprojects/bar/src/bar_files.txt`
+    //         `$MYPROJ/src/one_bar_file.txt` in `bar_files.txt`
+    //         since $MYPROJ = /projects/myprojects/foo
+    //         `$MYPROJ/src/one_bar_file.txt` = `/projects/myprojects/foo/src/one_bar_file.txt`
+    //     Cannot find `/projects/myprojects/foo/src/one_bar_file.txt`
+    //     since it should be `/projects/myprojects/bar/src/one_bar_file.txt`
+    //
+    // What we do is to replace $MYPROJ in any files that are not in current project folder to absolute file path.
+    // Empty string "" means do not modify file path.
+    //
+    "project_path_var": ""
+}

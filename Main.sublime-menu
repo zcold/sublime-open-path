@@ -1,0 +1,27 @@
+[
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "Open Path",
+                        "command": "edit_settings", "args":
+                        {
+                            "base_file": "${packages}/open_path/open_path.sublime-settings",
+                            "default": ""
+                        },
+
+                    }
+                ]
+            }
+        ]
+    }
+]
