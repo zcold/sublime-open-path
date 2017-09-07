@@ -1,10 +1,8 @@
 // Don't edit this file
 // use the one the User folder
 {
-    // text editor
-    "win_text_editor": "",
-    "osx_text_editor": "",
-    "posix_text_editor": "",
+    // where is sublime
+    "sublime_text": "sublime_text",
 
     // project path environment var to modify for opening files in other project.
     // Example:
