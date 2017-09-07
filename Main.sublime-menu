@@ -12,13 +12,24 @@
                 "children":
                 [
                     {
-                        "caption": "Open Path",
-                        "command": "edit_settings", "args":
-                        {
-                            "base_file": "${packages}/sublime-open-path/sublime-open-path.sublime-settings",
-                            "default": ""
-                        },
-
+                        "caption": "sublimne-open-path",
+                        "children":
+                        [
+                            {
+                                "caption": "README.md"
+                                "command": "open_file",
+                                "args": {"file": "${packages}/sublime-open-path/README.md"}
+                            },
+                            { "caption": "-" },
+                            {
+                                "caption": "Settings",
+                                "command": "edit_settings", "args":
+                                {
+                                    "base_file": "${packages}/sublime-open-path/sublime-open-path.sublime-settings",
+                                    "default": ""
+                                }
+                            }
+                        ]
                     }
                 ]
             }
