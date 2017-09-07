@@ -15,7 +15,7 @@
                         "caption": "Open Path",
                         "command": "edit_settings", "args":
                         {
-                            "base_file": "${packages}/open_path/open_path.sublime-settings",
+                            "base_file": "${packages}/sublime-open-path/sublime-open-path.sublime-settings",
                             "default": ""
                         },
 
