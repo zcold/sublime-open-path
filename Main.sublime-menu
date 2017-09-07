@@ -16,7 +16,7 @@
                         "children":
                         [
                             {
-                                "caption": "README.md"
+                                "caption": "README",
                                 "command": "open_file",
                                 "args": {"file": "${packages}/sublime-open-path/README.md"}
                             },
