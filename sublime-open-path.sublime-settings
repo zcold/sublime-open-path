@@ -3,6 +3,9 @@
 {
     // where is sublime
     "sublime_text": "sublime_text",
+        
+    // limit number of selected lines
+    "selection_limit": 1,
 
     // project path environment var to modify for opening files in other project.
     // Example:
