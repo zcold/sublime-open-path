@@ -47,7 +47,7 @@ class OpenPathCommand(sublime_plugin.TextCommand):
 
         project_path_var = self.settings.get('project_path_var', '')
         print('project path var', project_path_var)
-
+        selection_limit = self.settings.get('selection_limit', 1)
         selections = []
         for region in self.view.sel():
             if region.empty():
@@ -72,6 +72,7 @@ class OpenPathCommand(sublime_plugin.TextCommand):
             print('modified', line)
 
             self.paths.append((str(line), os.path.exists(line)))
+        self.paths = self.paths[:selection_limit]
 
     def is_enabled(self):
         self.settings = sublime.load_settings('sublime-open-path.sublime-settings')
