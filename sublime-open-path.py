@@ -53,8 +53,7 @@ class OpenPathCommand(sublime_plugin.TextCommand):
             if region.empty():
                 region = self.view.line(region)
             selections.extend(self.view.substr(region).split('\n'))
-            if len(selections) >= selection_limit:
-                break
+        selections = selections[:selection_limit]
         self.paths = []
         for line in selections:
             line = line.strip()
