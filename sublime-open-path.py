@@ -53,6 +53,8 @@ class OpenPathCommand(sublime_plugin.TextCommand):
             if region.empty():
                 region = self.view.line(region)
             selections.extend(self.view.substr(region).split('\n'))
+            if len(selections) >= selection_limit:
+                break
         self.paths = []
         for line in selections:
             line = line.strip()
@@ -72,7 +74,6 @@ class OpenPathCommand(sublime_plugin.TextCommand):
             print('modified', line)
 
             self.paths.append((str(line), os.path.exists(line)))
-        self.paths = self.paths[:selection_limit]
 
     def is_enabled(self):
         self.settings = sublime.load_settings('sublime-open-path.sublime-settings')
